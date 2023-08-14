@@ -31,7 +31,7 @@ public class Vehiculo {
     @Column(name = "numero_chasis", length = 50, nullable = true)
     private String numero_chasis;
 
-    @Column(name = "numero_motor", length = 50, nullable = true)
+    @Column(name = "numero_motor", length = 51, nullable = true)
     private String numero_motor;
 
     @ManyToOne
