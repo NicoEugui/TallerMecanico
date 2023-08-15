@@ -7,27 +7,34 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name = "clientes")
+@Table(name = "empleados")
 @ToString
 @EqualsAndHashCode
-public class Cliente {
+public class Empleado {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Getter
     @Setter
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_cliente")
-    private Long id_cliente;
+    @Column(name = "id_empleado")
+    private Long id_empleado;
 
     @ManyToOne
     @JoinColumn(name = "id_persona", referencedColumnName = "id_persona")
     private Persona persona;
 
-    @ManyToOne
-    @JoinColumn(name = "id_vehiculo", referencedColumnName = "id_vehiculo")
-    private Vehiculo vehiculo;
+    @Column(name = "cargo", nullable = false)
+    private String cargo;
 
     @ManyToOne
     @JoinColumn(name = "id_servicio", referencedColumnName = "id_servicio")
     private Servicio servicio;
+
+    @Column(name = "nombre_usuario", length = 50, nullable = false)
+    private String nombre_usuario;
+
+    @Column(name = "clave", nullable = false)
+    private String clave;
+
+
 }

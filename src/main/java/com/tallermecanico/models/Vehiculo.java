@@ -13,29 +13,29 @@ import lombok.ToString;
 public class Vehiculo {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Getter
     @Setter
-    @Column(name = "id_persona")
-    private Long id_persona;
+    @Column(name = "id_vehiculo")
+    private Long id_vehiculo; // Identificador único del vehículo
 
     @Column(name = "modelo", length = 100, nullable = false)
-    private String modelo;
+    private String modelo; // Modelo del vehículo
 
     @Column(name = "marca", length = 100, nullable = false)
-    private String marca;
+    private String marca; // Marca del vehículo
 
     @Column(name = "anio", nullable = false)
-    private Long anio;
+    private Long anio; // Año de fabricación del vehículo
 
     @Column(name = "numero_chasis", length = 50, nullable = true)
-    private String numero_chasis;
+    private String numero_chasis; // Número de chasis del vehículo
 
     @Column(name = "numero_motor", length = 51, nullable = true)
-    private String numero_motor;
+    private String numero_motor; // Número de motor del vehículo
 
     @ManyToOne
     @JoinColumn(name = "id_cliente", referencedColumnName = "id_cliente")
-    private Cliente cliente;
+    private Cliente cliente; // Cliente al que pertenece el vehículo
 
 }
