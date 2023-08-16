@@ -24,4 +24,10 @@ public class PersonaController {
     public Persona crearPersona(@RequestBody Persona persona) {
         return personaService.crearPersona(persona);
     }
+
+    @PutMapping("/persona")
+    @ResponseBody
+    public Persona modificarPersona(@RequestBody Persona persona) {
+        return personaService.modificarPersona(persona);
+    }
 }

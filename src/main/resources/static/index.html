@@ -11,36 +11,40 @@
     <section id="login" class="p-4 flex flex-col justify-center min-h-screen max-w-md mx-auto">
         <div class="p-6 bg-sky-100 rounded">
             <div class="flex items-center justify-center text-4xl font-black text-sky-900 m-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 512 512" xml:space="preserve"><path d="M459.957 203.4c42.547-38.609 49.656-82.484 40.141-119.469-.281-2.938-.984-5.406-3.547-7.266l-8.563-7.016c-1.484-1.375-3.484-2.063-5.484-1.859a7.04 7.04 0 0 0-5.031 2.859l-49.25 64.031a7.028 7.028 0 0 1-5.922 2.891l-17.875 1.313a7.08 7.08 0 0 1-4.219-1.563l-34.531-29.266a7.054 7.054 0 0 1-2.563-4.563l-2.141-16.188a6.922 6.922 0 0 1 1.266-5.047l46.109-62.641a7.057 7.057 0 0 0-.906-9.297l-11.188-8.734c-2.188-2.047-4.672-1.75-8.063-1.109-31.844 6.297-86.219 37.125-100.016 79.75-12.156 37.516-7.922 63.969-7.922 63.969 0 21.141-6.953 41.516-15.5 50.078L24.504 424.916c-.469.438-.922.859-1.375 1.313-19.844 19.844-19.813 52.063-.641 71.219 19.172 19.172 51.859 19.688 71.703-.172a45.464 45.464 0 0 0 2.641-2.859l231.672-250.438c28.5-25.36 84.922 1.671 131.453-40.579z" style="fill:#000"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 512 512"
+                     xml:space="preserve"><path d="M459.957 203.4c42.547-38.609 49.656-82.484 40.141-119.469-.281-2.938-.984-5.406-3.547-7.266l-8.563-7.016c-1.484-1.375-3.484-2.063-5.484-1.859a7.04 7.04 0 0 0-5.031 2.859l-49.25 64.031a7.028 7.028 0 0 1-5.922 2.891l-17.875 1.313a7.08 7.08 0 0 1-4.219-1.563l-34.531-29.266a7.054 7.054 0 0 1-2.563-4.563l-2.141-16.188a6.922 6.922 0 0 1 1.266-5.047l46.109-62.641a7.057 7.057 0 0 0-.906-9.297l-11.188-8.734c-2.188-2.047-4.672-1.75-8.063-1.109-31.844 6.297-86.219 37.125-100.016 79.75-12.156 37.516-7.922 63.969-7.922 63.969 0 21.141-6.953 41.516-15.5 50.078L24.504 424.916c-.469.438-.922.859-1.375 1.313-19.844 19.844-19.813 52.063-.641 71.219 19.172 19.172 51.859 19.688 71.703-.172a45.464 45.464 0 0 0 2.641-2.859l231.672-250.438c28.5-25.36 84.922 1.671 131.453-40.579z" style="fill:#000"/></svg>
                 <h1 class="tracking-wide">Carlorf<span class="font-mono">™</span></h1>
             </div>
             <form id="login_form" action="api_login" method="POST"
                   class="flex flex-col justify-center">
-                <label class="text-sm font-medium">Username</label>
+                <label class="text-sm font-medium">Usuario</label>
                 <input class="mb-3 px-2 py-1.5
           mb-3 mt-1 block w-full px-2 py-1.5 border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400
           focus:outline-none
           focus:border-sky-500
           focus:ring-1
           focus:ring-sky-500
-          focus:invalid:border-red-500 focus:invalid:ring-red-500" type="text" name="username" placeholder="wahyusa" required>
-                <label class="text-sm font-medium">Password</label>
+          focus:invalid:border-red-500 focus:invalid:ring-red-500" type="text" name="username" placeholder="wahyusa"
+                       required>
+                <label class="text-sm font-medium">Contraseña</label>
                 <input class="
           mb-3 mt-1 block w-full px-2 py-1.5 border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400
           focus:outline-none
           focus:border-sky-500
           focus:ring-1
           focus:ring-sky-500
-          focus:invalid:border-red-500 focus:invalid:ring-red-500" type="password" name="password" placeholder="********" required>
-                <button class="px-4 py-1.5 rounded-md shadow-lg bg-sky-600 font-medium text-gray-100 block hover:bg-sky-700 transition duration-300" type="submit">
+          focus:invalid:border-red-500 focus:invalid:ring-red-500" type="password" name="password"
+                       placeholder="********" required>
+                <button class="px-4 py-1.5 rounded-md shadow-lg bg-sky-600 font-medium text-gray-100 block hover:bg-sky-700 transition duration-300"
+                        type="submit">
                     <span id="login_process_state" class="hidden">Checking ...</span>
-                    <span id="login_default_state">Login</span></button>
+                    <span id="login_default_state">Ingresar</span></button>
             </form>
         </div>
     </section>
 
     <script>
-        document.getElementById("login_form").onsubmit = function() {
+        document.getElementById("login_form").onsubmit = function () {
             event.preventDefault()
             // animation
             document.getElementById("login_process_state").classList.remove("hidden")
