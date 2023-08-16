@@ -21,15 +21,23 @@ public class Repuesto {
     @Column(name = "codigo_repuesto", length = 50, nullable = false)
     private String codigo_repuesto;
 
+    @Getter
+    @Setter
     @Column(name = "nombre", nullable = false)
     private String nombre;
 
+    @Getter
+    @Setter
     @Column(name = "descripcion", length = 1000, nullable = false)
     private String descripcion;
 
+    @Getter
+    @Setter
     @Column(name = "fabricante", nullable = false)
     private String fabricante;
 
+    @Getter
+    @Setter
     @Column(name = "precio", nullable = false)
     private Long precio;
 }
