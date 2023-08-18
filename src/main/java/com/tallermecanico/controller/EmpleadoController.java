@@ -16,6 +16,6 @@ public class EmpleadoController {
 
     @PostMapping("/login")
     public Empleado login (@RequestBody Empleado empleado) {
-        return empleadoService.login(empleado.getNombreUsuario(), empleado.getClave());
+        return empleadoService.login(empleado.getUsername(), empleado.getPassword());
     }
 }

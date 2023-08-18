@@ -2,10 +2,11 @@ package com.tallermecanico.repository;
 
 import com.tallermecanico.models.Empleado;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
-@Repository
-public interface EmpleadoRepository extends JpaRepository<Empleado, Long>{
+import java.util.Optional;
 
-    public Empleado findByNombreUsuarioAndClave(String nombreUsuario, String clave);
+public interface EmpleadoRepository extends JpaRepository<Empleado,Long> {
+    Optional<Empleado> findByUsername(String username);
+
+    Empleado findByUsernameAndPassword(String username, String password);
 }

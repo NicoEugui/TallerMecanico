@@ -1,15 +1,14 @@
 package com.tallermecanico.models;
 
 import jakarta.persistence.*;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 @Entity
 @Table(name = "personas")
-@ToString
-@EqualsAndHashCode
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class Persona {
 
     @Id
@@ -45,15 +44,4 @@ public class Persona {
     private String email;
 
 
-    public Persona(Long id_persona, String nombre, String apellido, String direccion, String telefono, String email) {
-        this.id_persona = id_persona;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.direccion = direccion;
-        this.telefono = telefono;
-        this.email = email;
-    }
-
-    public Persona() {
-    }
 }

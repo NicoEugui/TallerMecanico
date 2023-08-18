@@ -2,10 +2,7 @@ package com.tallermecanico.models;
 
 
 import jakarta.persistence.*;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.Date;
 
@@ -13,6 +10,8 @@ import java.util.Date;
 @Table(name = "servicios")
 @ToString
 @EqualsAndHashCode
+@AllArgsConstructor
+@NoArgsConstructor
 public class Servicio {
 
     @Id

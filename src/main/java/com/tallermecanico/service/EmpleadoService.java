@@ -12,7 +12,7 @@ public class EmpleadoService {
     @Autowired
     EmpleadoRepository empleadoRepository;
 
-    public Empleado login(String nombreUsuario, String clave) {
-        return empleadoRepository.findByNombreUsuarioAndClave(nombreUsuario, clave);
+    public Empleado login(String username, String password) {
+        return empleadoRepository.findByUsernameAndPassword(username, password);
     }
 }
